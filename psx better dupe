@@ -5,7 +5,7 @@ local mybanks = lib.Network.Invoke("get my banks")
 local PetsList = {}
 for i,v in pairs(lib.Save.Get().Pets) do
     local v2 = lib.Directory.Pets[v.id];
-    if v2.rarity == "Exclusive" or v2.rarity == "Mythical" and v.dm or v2.rarity == "Mythical" and v.r then
+    if v2.rarity == "Exclusive" or v2.rarity == "Mythical" and v.dm or v2.rarity == "Legendary" and v.r then
         table.insert(PetsList, v.uid);
     end
 end
